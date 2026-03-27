@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+    font-family: monospace;
+    padding: 70px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+h3{
+    font-family: monospace;
+}
+p{
+    text-align: justify;
+}
+video{/*i added a border around the video*/
+    border: 1px solid white;
+    filter: grayscale();
+}
