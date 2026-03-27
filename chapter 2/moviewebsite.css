@@ -1,0 +1,26 @@
+body{/*this is for the layout of the body*/
+    background-color: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
+    font: 100;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 100px;
+}
+p{/*i only wanted the paragraphs to be justified rather than centered*/
+    text-align: justify;
+}
+a{
+    color: rgb(255, 0, 0);
+}
+table{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+    border-spacing: 5px;
+    text-size-adjust: 50px;
+}
+ul{/*same with the paragraphs, i only wanted certain parts justified and centered*/
+    text-align: justify;
+}
+.photo{/*this is a class for the images, i couldnt just use the img because there are some images i didnt want wit an ountline*/
+    border: 1px solid black;
+}
