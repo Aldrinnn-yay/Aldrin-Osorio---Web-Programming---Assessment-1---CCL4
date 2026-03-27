@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="petrolcalculator.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SUPER DUPER COOL PETROL STATION CALCULATOR</h1>
+
+    <form onsubmit="petrolpricecalculation(event)"><!--i wanted to use the registration form tags to challenge myself-->
+        <label for="userinputprice">Enter cost of Petrol per Litre: </label>
+        <input type="float" id="price" name="userinputprice" placeholder="(min=1.72)"><!--this asks the user to input the price for petrol per litre-->
+        <br>
+        <label for="userinputpetrol">Enter amount of Petrol bought: </label>
+        <input type="float" id="amount" name="userinputpetrol" placeholder="(no limit)"><!--this one asks the user how many petrol they bought-->
+        <br>
+        <input type="submit" value="submit" class="button">
+    </form>
+    <br>
+    <p id="totalcostdisplay"></p>
+
+    <script>//this is the java for the website (had to do a whole w3schools java learning session for this:/)
+        function petrolpricecalculation(event){// this creates the function
+            event.preventDefault();//makes sure the website wont just refresh once user presses submit
+
+            var userinputprice = (document.getElementById("price").value);//creates variable for the inputed price
+            var userinputpetrol = (document.getElementById("amount").value);//creates variable for the amount
+            //we have to put in inside so the program takes the values after the user has inputed them
+
+            if (userinputprice >= 1.72) {//this will detect if the price input is equal to or less than 1.72
+                const totalcost = userinputprice * userinputpetrol
+                document.getElementById("totalcostdisplay").textContent =
+                    "TOTAL PRICE: $" + totalcost.toFixed(2); //this will show the user the total price
+            }
+            else {
+                alert("You entered a price lower than 1.72") // this will create a pop up telling the user they entered a price below the minimum
+            }
+        }
+    </script>
+</body>
+</html>
